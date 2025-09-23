@@ -11,8 +11,11 @@ rotas.post("/usuarios", usuarioController.adicionar);
 rotas.get("/usuarios", usuarioController.listar);
 
 // Rotas do Carrinho
-rotas.get('/carrinho',carrinhoController.listar)
-rotas.post('/carrinho',carrinhoController.adicionar)
+rotas.get('/carrinho', carrinhoController.listar)
+rotas.post('/carrinho', carrinhoController.adicionar)
+rotas.put('/carrinho/quantidade', carrinhoController.atualizarQuantidade)
+rotas.delete('/carrinho/item', carrinhoController.removerItem)
+rotas.delete('/carrinho', carrinhoController.remover)
 
 // Rotas dos produtos
 rotas.get('/produtos',produtosController.listar)
